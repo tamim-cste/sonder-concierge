@@ -1,0 +1,14 @@
+--cream: #F4F1EA;
+  --navy: #1B2A4A;
+  --terracotta: #C17B4F;
+  --tag-bg: #FBF3E3;
+  --text-muted: #6B7280;
+  --white: #FFFFFF;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+
+unset HTTP_PROXY
+unset HTTPS_PROXY
+unset http_proxy
+unset https_proxy
