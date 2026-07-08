@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+
+body{
+    background-color: hwb(36 89% 5%);
+}
+
+.main-header{
+    color: red;
+}
+
+
+
+.card{
+    border: 1px solid rgba(0,0,0,0.12);
+    width: 320px;
+    height: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.cards{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-trip .collage-img{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px;
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+}
+
+.card-trip .collage-img img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     display: block;
+     border-radius: 6px;
+}
