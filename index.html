@@ -12,9 +12,19 @@
 </head>
 <body>
     <main>
-        <header>
-
+        <header class="main-header">
+            <p class="eyebrow"><i data-lucide="badge"></i> SONDER CONCIERGE</p>
+            <h1>Your trips</h1>
+            <p class="subtitle">Every trip you start with the concierge lives here. Pick up where you left off, or start a new one.</p>
         </header>
+
+        <div class="claim-banner">
+            <div class="claim-banner-text">
+                <i data-lucide="heart"></i>
+                <p>Claim your profile and every trip here is saved to your <strong>Traveler.md</strong>, so your taste travels with you, across Sonder and any AI tool. <i data-lucide="info" class="info-icon"></i></p>
+            </div>
+            <button class="btn-claim"><i data-lucide="heart"></i> Claim my travel profile</button>
+        </div>
 
         <!-- This is card section -->
          <section class="trips-section">
@@ -22,7 +32,7 @@
                 <h2>All trips <span>2 trips</span></h2>
             </header>
             <div class="cards">
-                <div class="card card-new">
+                <div class="card card-new open-modal">
                     <div class="card-new-inner">
                         <i data-lucide="plus" class="icon-plus"></i>
                         <h2>Start a new trip</h2>
@@ -46,7 +56,7 @@
                                 <span class="label">For two</span>
                             </div>
                             <hr>
-                            <button class="btn-outline">Continue Planning <i data-lucide="arrow-right"></i> </button>
+                            <button class="btn-outline open-modal">Continue Planning <i data-lucide="arrow-right"></i> </button>
                     </div>
                 </div>
                 <div class="card card-trip-2">
@@ -56,15 +66,15 @@
                         <img src="./assets/images/lisbon-1.jpg" alt="">
                     </div>
                     <div class="card-body">
-                          <h3>Lisbon, 5-year anniversary</h3>
-                          <p class="card-desc">5 stays recommended · Started just now</p>
+                          <h3>Santorini, a slow week</h3>
+                          <p class="card-desc">4 stays recommended · Started 3 days ago</p>
                            <div class="label-group">
-                                <span class="label">Lisbon</span>
-                                <span class="label">1-2 weeks</span>
+                                <span class="label">Santorini</span>
+                                <span class="label">7 nights</span>
                                 <span class="label">For two</span>
                             </div>
                             <hr>
-                            <button class="btn-outline">Continue Planning <i data-lucide="arrow-right"></i> </button>
+                            <button class="btn-outline open-modal">Continue Planning <i data-lucide="arrow-right"></i> </button>
                     </div>
                 </div>
 
@@ -72,7 +82,24 @@
 
          </section>
     </main>
-    
+
+    <div class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close"><i data-lucide="x"></i></button>
+            <div class="modal-icon"><i data-lucide="badge"></i></div>
+            <h2>Tell me about your trip</h2>
+            <textarea class="trip-input" id="tripInput" placeholder="e.g. We're going to Lisbon for our 5-year anniversary for 1-2 weeks. Somewhere quiet and walkable, with great coffee and a terrace for slow mornings. I'd like to catch a Fado show one night too."></textarea>
+            <p class="ai-row"><i data-lucide="sparkles"></i> Already planned with AI?
+                <span class="chip" data-sample="Lisbon, 5 nights, boutique hotel with a rooftop, walking distance to Alfama, budget around $200/night.">ChatGPT</span>
+                <span class="chip" data-sample="Kyoto, 6 nights in spring, traditional ryokan with onsen, near Gion district, quiet and authentic.">Claude</span>
+                <span class="chip" data-sample="Mexico City, 4 nights, Roma Norte neighborhood, walkable, great food scene nearby.">Gemini</span>
+                <span class="chip" data-sample="Copenhagen, 5 nights, design-forward apartment, close to Nyhavn, bike friendly area.">Grok</span>
+                <span class="chip" data-sample="Lake Como, 3 nights, lakeview stay, romantic getaway for two, boat access preferred.">Copilot</span>
+            </p>
+            <p class="ai-note">Paste your AI itinerary above and Tripp will find the stays to match.</p>
+            <button class="btn-primary" id="findStaysBtn" disabled><i data-lucide="loader-circle"></i> Find Best Stays</button>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="scripts/script.js"></script>
